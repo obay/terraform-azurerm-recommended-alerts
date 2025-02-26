@@ -1,7 +1,7 @@
 resource "azurerm_monitor_metric_alert" "available_memory_bytes" {
   name                = "Available Memory Bytes - ${var.vmname}"
   resource_group_name = var.monitoring_resource_group_name
-  scopes              = [var.monitoring_linux_virtual_machine_id]
+  scopes              = [var.monitoring_scope]
   description         = "Available Memory Bytes - ${var.vmname}"
   severity            = var.monitoring_metric_alert_severity
   frequency           = "PT${var.monitoring_metric_alert_frequency}M"

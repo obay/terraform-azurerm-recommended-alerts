@@ -1,4 +1,4 @@
-variable "monitoring_linux_virtual_machine_id" {
+variable "monitoring_scope" {
   type        = string
-  description = "The id of the linux virtual machine"
+  description = "The id of scope being alerted on. This can be a virtual machine or virtual machine scale set ID which will be alerted on"
 }

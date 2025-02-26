@@ -1,7 +1,7 @@
 resource "azurerm_monitor_metric_alert" "percentage_cpu" {
   name                = "Percentage CPU - ${var.vmname}"
   resource_group_name = var.monitoring_resource_group_name
-  scopes              = [var.monitoring_linux_virtual_machine_id]
+  scopes              = [var.monitoring_scope]
   description         = "Percentage CPU - ${var.vmname}"
   severity            = var.monitoring_metric_alert_severity
   frequency           = "PT${var.monitoring_metric_alert_frequency}M"
