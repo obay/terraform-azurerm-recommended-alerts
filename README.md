@@ -2,7 +2,7 @@
 
 A Terraform module to create recommended alerts for Azure Virtual Machines.
 
-![Azure VM Alerts Architecture](./images/recommended-alert-rules.png)
+![Azure VM Alerts Architecture](https://raw.githubusercontent.com/obay/terraform-azurerm-recommended-alerts/refs/heads/main/images/recommended-alert-rules.png)
 
 
 ## Usage
