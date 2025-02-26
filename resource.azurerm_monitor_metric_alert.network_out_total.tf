@@ -3,7 +3,7 @@ resource "azurerm_monitor_metric_alert" "network_out_total" {
   resource_group_name = var.monitoring_resource_group_name
   scopes              = [var.monitoring_linux_virtual_machine_id]
   description         = "Network Out Total - ${var.vmname}"
-  severity            = 3
+  severity            = var.monitoring_metric_alert_severity
   frequency           = "PT${var.monitoring_metric_alert_frequency}M"
   window_size         = "PT${var.monitoring_metric_alert_window_size}M"
   criteria {
