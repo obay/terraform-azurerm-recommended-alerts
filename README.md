@@ -17,7 +17,7 @@ The below code example assumes you have the action group and virtual machine cre
 ```hcl
 module "linux_vm_alerts" {
   source                              = "obay/recommended-alerts/azurerm"
-  version                             = "0.0.5"
+  version                             = "0.0.7"
   vmname                              = azurerm_linux_virtual_machine.monitoring_linux_example_vm.name
   monitoring_scope                    = azurerm_linux_virtual_machine.monitoring_linux_example_vm.id
   monitoring_resource_group_name      = azurerm_resource_group.monitoring_rg.name
