@@ -7,6 +7,13 @@ A Terraform module to create recommended alerts for Azure Virtual Machines.
 
 ## Usage
 
+The below code example assumes you have the action group and virtual machine created using Terraform. If they already exist, feel free to replace the resource references with static values from the resources already created.
+
+- The `vmwname` variable is only used as a suffex for the alert names that will be created.
+- The `monitoring_scope` variable takes one value - which is the VM ID - and uses that to assign the alerts to the resouce. There is nothing stopping you from using other resource IDs (resource groups or other scopes) but that is not tested at this version yet.
+- The `monitoring_resource_group_name` variable is where the alerts will be created.
+- The `monitoring_action_group_id` variable points to an existing action group that will be used when the condtion is met. This is where you will have the email address(es) to be notified or other action to be taken.
+
 ```hcl
 module "linux_vm_alerts" {
   source                              = "obay/recommended-alerts/azurerm"
