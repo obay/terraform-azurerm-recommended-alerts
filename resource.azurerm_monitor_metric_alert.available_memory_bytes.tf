@@ -11,7 +11,7 @@ resource "azurerm_monitor_metric_alert" "available_memory_bytes" {
     metric_name      = "Available Memory Bytes"
     aggregation      = "Average"
     operator         = "LessThan"
-    threshold        = 1000000000
+    threshold        = var.available_memory_bytes_threshold
   }
   action {
     action_group_id = var.monitoring_action_group_id

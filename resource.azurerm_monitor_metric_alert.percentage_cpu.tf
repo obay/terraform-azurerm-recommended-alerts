@@ -11,7 +11,7 @@ resource "azurerm_monitor_metric_alert" "percentage_cpu" {
     metric_name      = "Percentage CPU"
     aggregation      = "Average"
     operator         = "GreaterThan"
-    threshold        = 80
+    threshold        = var.percentage_cpu_threshold
   }
   action {
     action_group_id = var.monitoring_action_group_id

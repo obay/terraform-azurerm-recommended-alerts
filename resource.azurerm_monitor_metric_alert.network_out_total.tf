@@ -11,7 +11,7 @@ resource "azurerm_monitor_metric_alert" "network_out_total" {
     metric_name      = "Network Out Total"
     aggregation      = "Total"
     operator         = "GreaterThan"
-    threshold        = 200000000000
+    threshold        = var.network_out_total_threshold
   }
   action {
     action_group_id = var.monitoring_action_group_id

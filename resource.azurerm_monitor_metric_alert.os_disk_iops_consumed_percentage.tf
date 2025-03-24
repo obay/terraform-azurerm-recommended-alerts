@@ -11,7 +11,7 @@ resource "azurerm_monitor_metric_alert" "os_disk_iops_consumed_percentage" {
     metric_name      = "OS Disk IOPS Consumed Percentage"
     aggregation      = "Average"
     operator         = "GreaterThan"
-    threshold        = 95
+    threshold        = var.os_disk_iops_consumed_percentage_threshold
   }
   action {
     action_group_id = var.monitoring_action_group_id
